@@ -35,7 +35,7 @@ dependencies {
 publish {
     userOrg = 'scene'
     groupId = 'wiki.scene.socket'
-    artifactId = 'SceneNettySocket'
+    artifactId = 'SceneToast'
     publishVersion = '1.0.1'
     desc = 'xxxxx'
 //    website = 'https://github.com/sunfusheng/GlideImageView'

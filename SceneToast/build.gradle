@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api 'androidx.appcompat:appcompat:1.1.0'
+    api 'com.hjq:toast:8.0'
+}
+
+publish {
+    userOrg = 'scene'
+    groupId = 'wiki.scene.socket'
+    artifactId = 'SceneNettySocket'
+    publishVersion = '1.0.1'
+    desc = 'xxxxx'
+//    website = 'https://github.com/sunfusheng/GlideImageView'
+}
